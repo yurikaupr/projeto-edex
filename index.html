@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto em Forma de Loop</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .loop-container {
+            white-space: nowrap;
+        }
+
+        .loop-text {
+            display: inline-block;
+        }
+
+        .imagetam{
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loop-container" id="loopContainer">
+        <div class="loop-text" id="loopText">
+            <img class="imagetam" src="image/1.webp" alt="">
+            <img class="imagetam" src="image/1.webp" alt="">
+            <img class="imagetam" src="image/1.webp" alt="">
+            <img class="imagetam" src="image/1.webp" alt="">
+            <img class="imagetam" src="image/1.webp" alt="">
+            <img class="imagetam" src="image/1.webp" alt="">
+            <img class="imagetam" src="image/1.webp" alt="">
+        </div>
+    </div>
+
+    <script>
+        const loopContainer = document.getElementById('loopContainer');
+        const loopText = document.getElementById('loopText');
+        
+        const clonedText = loopText.cloneNode(true);
+        loopContainer.appendChild(clonedText);
+
+        function animateLoop() {
+        const loopWidth = loopText.offsetWidth;
+        const containerWidth = loopContainer.offsetWidth;
+
+        let currentPosition = 0;
+        let speed = 0.5;
+
+        function moveText() {
+        currentPosition -= speed;
+        if (currentPosition < -loopWidth) {
+            currentPosition = 0;
+        }
+        loopText.style.transform = `translateX(${currentPosition}px)`;
+        clonedText.style.transform = `translateX(${currentPosition}px)`;
+        requestAnimationFrame(moveText);
+    }
+    moveText();
+}
+animateLoop();
+    </script>
+</body>
+</html>
