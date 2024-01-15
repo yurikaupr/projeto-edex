@@ -1,68 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texto em Forma de Loop</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorem Ipsum</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-        .loop-container {
-            white-space: nowrap;
-        }
+    #content {
+      max-width: 600px;
+      text-align: justify;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+      margin: 0 auto;
+    }
 
-        .loop-text {
-            display: inline-block;
-        }
-
-        .imagetam{
-            width: 250px;
-        }
-    </style>
+    #showMoreBtn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-    <div class="loop-container" id="loopContainer">
-        <div class="loop-text" id="loopText">
-            <img class="imagetam" src="image/1.webp" alt="">
-            <img class="imagetam" src="image/1.webp" alt="">
-            <img class="imagetam" src="image/1.webp" alt="">
-            <img class="imagetam" src="image/1.webp" alt="">
-            <img class="imagetam" src="image/1.webp" alt="">
-            <img class="imagetam" src="image/1.webp" alt="">
-            <img class="imagetam" src="image/1.webp" alt="">
-        </div>
-    </div>
 
-    <script>
-        const loopContainer = document.getElementById('loopContainer');
-        const loopText = document.getElementById('loopText');
-        
-        const clonedText = loopText.cloneNode(true);
-        loopContainer.appendChild(clonedText);
+  <div id="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, ipsum eu dapibus vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Quisque vel urna ac lectus efficitur condimentum. Proin sagittis justo vel dolor tristique, vel efficitur metus auctor. Vivamus vehicula nunc ut diam bibendum, ac varius sapien scelerisque. Integer auctor odio in fermentum volutpat. Nullam id dui auctor, tincidunt risus vel, ultrices quam.
+    </p>
+    <p id="moreText" style="display:  none;">
+      Proin sit amet nunc sed ligula congue semper. Integer consectetur dolor id lacinia aliquam. Etiam ac erat in leo tincidunt ullamcorper ac at justo. Vivamus eget justo a metus ullamcorper pellentesque.
+      <!-- Adicione mais parágrafos conforme necessário -->
+    </p>
+  </div>
 
-        function animateLoop() {
-        const loopWidth = loopText.offsetWidth;
-        const containerWidth = loopContainer.offsetWidth;
+  <button id="showMoreBtn" onclick="toggleContent()">Ver Mais</button>
 
-        let currentPosition = 0;
-        let speed = 0.5;
+  <script>
+    let expanded = false;
+    const contentDiv = document.getElementById("content");
+    const moreText = document.getElementById("moreText");
+    const showMoreBtn = document.getElementById("showMoreBtn");
 
-        function moveText() {
-        currentPosition -= speed;
-        if (currentPosition < -loopWidth) {
-            currentPosition = 0;
-        }
-        loopText.style.transform = `translateX(${currentPosition}px)`;
-        clonedText.style.transform = `translateX(${currentPosition}px)`;
-        requestAnimationFrame(moveText);
+    function toggleContent() {
+      expanded = !expanded;
+      contentDiv.style.height = expanded ? "auto" : "100px"; // Altura desejada para o resumo
+      moreText.style.display = expanded ? "block" : "none";
+      showMoreBtn.innerHTML = expanded ? "Ver Menos" : "Ver Mais";
     }
-    moveText();
-}
-animateLoop();
-    </script>
+  </script>
+
 </body>
 </html>
