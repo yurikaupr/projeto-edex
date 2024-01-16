@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +8,33 @@
       margin: 0;
       font-family: Arial, sans-serif;
     }
-
     .cupons-container {
       display: flex;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
       white-space: nowrap;
       padding: 10px;
+      width: 35%;
     }
-
     .cupon-column {
       flex-shrink: 0;
-      width: 300px;
       margin-right: 10px;
-      border: 1px solid #ccc;
       padding: 20px;
       box-sizing: border-box;
       scroll-snap-align: start;
     }
-
-    /* Estilos para dispositivos móveis */
+    .cupom-flex{
+        display: flex;
+        background-color: rgba(201, 201, 201, 0.63);
+        border-radius: 5px;
+        padding-right: 40px;
+        align-items: center;
+        box-shadow: 1px 1px 2px #0000002e;
+    }
+    .image-cupom{
+        margin-right: 15px;
+        margin-left: 20px;
+    }
     @media (max-width: 768px) {
       .cupons-container {
         flex-wrap: nowrap;
@@ -41,76 +48,19 @@
   <title>Cupons</title>
 </head>
 <body>
-
 <div class="cupons-container">
   <div class="cupon-column">
-    <h2>Cupom de Desconto</h2>
-    <p>Cupom 1 (Desconto)</p>
-    <p>Cupom 2 (Desconto)</p>
-    <p>Cupom 3 (Desconto)</p>
-    <!-- Adicione mais cupons de desconto conforme necessário -->
+    <div class="cupom-flex">
+        <img class="image-cupom" width="50" height="50" src="https://img.icons8.com/ios/50/loyalty-card.png" alt="loyalty-card"/>
+        <p><strong>Cupom VOUDEAPP</strong> 15% OFF na sua <br> primeira compra</p>
+    </div>
   </div>
   <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
+    <div class="cupom-flex">
+        <img class="image-cupom" width="50" height="50" src="https://img.icons8.com/ios/50/loyalty-card.png" alt="loyalty-card"/>
+        <p><strong>Cupom VOUDEAPP</strong> 15% OFF na sua <br> primeira compra</p>
+    </div>
+  </div>
 </div>
-<div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
-  <div class="cupon-column">
-    <h2>Cupom de Frete Grátis</h2>
-    <p>Cupom 4 (Frete Grátis)</p>
-    <p>Cupom 5 (Frete Grátis)</p>
-    <p>Cupom 6 (Frete Grátis)</p>
-    <!-- Adicione mais cupons de frete grátis conforme necessário -->
-  </div>
 </body>
 </html>
