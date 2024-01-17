@@ -1,66 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .cupons-container {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      white-space: nowrap;
-      padding: 10px;
-      width: 35%;
-    }
-    .cupon-column {
-      flex-shrink: 0;
-      margin-right: 10px;
-      padding: 20px;
-      box-sizing: border-box;
-      scroll-snap-align: start;
-    }
-    .cupom-flex{
-        display: flex;
-        background-color: rgba(201, 201, 201, 0.63);
-        border-radius: 5px;
-        padding-right: 40px;
-        align-items: center;
-        box-shadow: 1px 1px 2px #0000002e;
-    }
-    .image-cupom{
-        margin-right: 15px;
-        margin-left: 20px;
-    }
-    @media (max-width: 768px) {
-      .cupons-container {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-      }
-      .cupon-column {
-        margin-right: 0;
-      }
-    }
-  </style>
-  <title>Cupons</title>
-</head>
+  <link rel="stylesheet" href="styles-overflow.css">
+  <script src="script.js"></script>
 <body>
-<div class="cupons-container">
-  <div class="cupon-column">
-    <div class="cupom-flex">
-        <img class="image-cupom" width="50" height="50" src="https://img.icons8.com/ios/50/loyalty-card.png" alt="loyalty-card"/>
-        <p><strong>Cupom VOUDEAPP</strong> 15% OFF na sua <br> primeira compra</p>
+  <div>
+    <div>
+      <p>Compre sua Calça Impermeável em até 10 parcelas ou economize 5% em pagamentos à vista. <a href="">Saiba mais ></a></p>
     </div>
   </div>
-  <div class="cupon-column">
-    <div class="cupom-flex">
-        <img class="image-cupom" width="50" height="50" src="https://img.icons8.com/ios/50/loyalty-card.png" alt="loyalty-card"/>
-        <p><strong>Cupom VOUDEAPP</strong> 15% OFF na sua <br> primeira compra</p>
+  <div>
+    <div>
+      <h1>Calça Branca Impermeável</h1>
+      <img src="" alt="">
     </div>
+      <div>
+        <button>Comprar agora</button>
+        <p>A partir de R$39,89/mês ou 398,90</p>
+      </div>
   </div>
-</div>
+  <div>
+    <div>
+      <h2>Explore cada parte.</h2>
+    </div>
+    <div style="float: left; width: 50%;">
+      <p id="descricaoOpcao"></p>
+      <ul class="generic-text">
+          <li id="li-repele"><a href="javascript:void(0)" onclick="mostrarImagem('repele')">Repele Líquidos</a></li>
+          <li id="li-empina"><a href="javascript:void(0)" onclick="mostrarImagem('empina')">Empina Bumbum</a></li>
+          <li id="li-modeladora"><a href="javascript:void(0)" onclick="mostrarImagem('modeladora')">Modeladora</a></li>
+          <li id="li-aviamentos"><a href="javascript:void(0)" onclick="mostrarImagem('aviamentos')">Aviamentos</a></li>
+          <li id="li-composição"><a href="javascript:void(0)" onclick="mostrarImagem('composicao')">Composição</a></li>
+      </ul>
+  </div>
+
+  <div style="float: right; width: 50%;">
+      <img id="repele" class="imagem" src="caminho_da_imagem_repele.jpg" alt="Repele Líquidos">
+      <img id="empina" class="imagem" src="caminho_da_imagem_empina.jpg" alt="Empina Bumbum">
+      <img id="modeladora" class="imagem" src="caminho_da_imagem_modeladora.jpg" alt="Modeladora">
+      <img id="aviamentos" class="imagem" src="caminho_da_imagem_aviamentos.jpg" alt="Aviamentos">
+      <img id="composicao" class="imagem" src="caminho_da_imagem_composicao.jpg" alt="Composição">
+  </div>
 </body>
 </html>
