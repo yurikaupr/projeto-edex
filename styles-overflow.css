@@ -35,9 +35,11 @@ h1.principal-title {
     color: #fff;
     padding-left: 100px;
     margin-top: 0;
+    margin-bottom: 0;
     padding-top: 30px;
     padding-bottom: 30px;
     font-family: sans-serif;
+    font-size: 35px;
 }
 a.link-compra {
     text-align: center;
@@ -50,6 +52,10 @@ a.link-compra {
     border-radius: 25px;
     display: inline;
     font-size: 15px;
+}
+a.link-compra:hover{
+    background: rgb(78 164 245);
+    transition: .25s;
 }
 .compra-item{
     text-align: center;
@@ -79,77 +85,142 @@ img.calça-foto-principal{
 ul.generic-text {
     list-style-type: none;
     margin: 0;
+    padding-left: 34%;
+    padding-top: 20px;
+    padding-bottom: 190px;
+    background: #101010;
+    font-size: 15px;
 }
-
+a.link-generic-text.selected {
+    color: white;
+    font-family: sans-serif;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    opacity: 1;
+}
+a.link-generic-text{
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    opacity: 0.5;
+}
+a.link-generic-text:hover{
+    opacity: 1;
+    transition: none;
+}
 p#descricaoOpcao{
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #fff;
     padding-bottom: 20px;
+    padding-top: 30px;
+    padding-left: 35%;
+    background: #101010;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-family: sans-serif;
+    padding-right: 160px;
+    font-size: 15px;
 }
-
 li {
     margin-bottom: 10px;
 }
-
+.image-categories{
+    background-color: #101010;
+    padding-bottom: 45px;
+}
 a {
     text-decoration: none;
     padding: 5px;
     border: 1px solid transparent;
     display: block;
 }
-
-.generic-text li:hover{
-    background-color: #2e2e30;
+.generic-text li{
     border-radius: 25px;
 }
+.generic-text li:hover{
+    background-color: #2e2e30;
+    transition: .25s ease;
+}
 li#li-repele{
-    width: 131px;
+    width: 163px;
     text-align: center;
 }
 li#li-empina{
-    width: 141px;
+    width: 166px;
     text-align: center;
 }
 li#li-modeladora{
     text-align: center;
-    width: 117px;
+    width: 184px;
 }
 li#li-aviamentos{
     text-align: center;
-    width: 111px;
+    width: 170px;
 }
 li#li-composição{
     text-align: center;
-    width: 111px;
+    width: 136px;
 }
 
 
 #li-repele a:hover{
     color: white;
     text-align: center;
-    width: 120px;
 }
 #li-empina a:hover{
     color: white;
     text-align: center;
-    width: 130px;
 }
 #li-modeladora a:hover{
     color: white;
-    text-align: center;
-    width: 105px;
+    text-align: center;;
 }
 #li-aviamentos a:hover{
     color: white;
     text-align: center;
-    width: 100px;
 }
 #li-composição a:hover{
     color: white;
     text-align: center;
-    width: 100px;
 }
 
 a.selected {
     border: 1px solid #333;
     border-radius: 25px;
+}
+img#image-impermeável{
+    width: 19px;
+    filter: invert(1);
+    padding-right: 10px;
+    padding-left: 5px;
+} 
+img#image-bumbum{
+    width: 19px;
+    filter: invert(1);
+    padding-right: 10px;
+    padding-left: 5px;
+}
+img#image-modeladora{
+    width: 19px;
+    filter: invert(1);
+    padding-right: 10px;
+    padding-left: 5px;
+}
+img#image-aviamentos{
+    width: 19px;
+    filter: invert(1);
+    padding-right: 10px;
+    padding-left: 5px;
+}
+img#image-composição{
+    width: 19px;
+    filter: invert(1);
+    padding-right: 10px;
+    padding-left: 5px;
 }

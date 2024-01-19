@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleciona a primeira opção por padrão ao carregar a página
     mostrarImagem('repele');
 });
 
@@ -36,10 +35,6 @@ function mostrarImagem(tipo) {
             break;
         case 'composicao':
             textoParagrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempora, consequuntur non minima qui sunt odio autem ipsa animi saepe obcaecati soluta quaerat facilis sit quod, voluptatibus quo sequi cumque.";
-            break;
-
-        default:
-            textoParagrafo = "Texto genérico.";
             break;
     }
 
